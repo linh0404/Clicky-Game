@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component} from 'react';
+import Card from "./components/card/index";
+import Wrapper from "./components/wrapper/index";
+import Title from "./components/title/index";
+import friends from "./friends.json";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    friends
+  };
+
+  removeFriend = id => {
+    const friends = this.state.friends.filter(friend => friend.id !== id);
+    this.setState({ friends })
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Title>Clicky Game</Title>
+        {this.state.friends.map(friend => (
+        <Card
+        id={friend.id}
+        name={friend.name}
+        image={friend.image}
+        />
+        ))}
+      </Wrapper>
+    );
+  }
 }
 
 export default App;

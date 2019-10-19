@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name": "Sandor Clegane",
+        "image": "./public/images/sandor_clegane.png"
+    },
+    {
+        "id": 2,
+        "name": "Danaerys Targaryen",
+        "image": "./public/images/danaerys_targaryen.png"
+    },
+    {
+        "id": 3,
+        "name": "Bran Stark",
+        "image": "./public/images/bran_stark.png"
+    },
+    {
+        "id": 4,
+        "name": "Jorah Mormont",
+        "image": "./public/images/jorah_mormont.png"
+    },
+    {
+        "id": 5,
+        "name": "Arya Stark",
+        "image": "./public/images/arya_stark.png"
+    },
+    {
+        "id": 6,
+        "name": "Theon Greyjoy",
+        "image": "./public/images/theon_greyjoy.png"
+    },
+    {
+        "id": 7,
+        "name": "Brienne of Tarth",
+        "image": "./public/images/brienne-of-tarth.png"
+    },
+    {
+        "id": 8,
+        "name": "Davos Seaworth",
+        "image": "./public/images/davos_seaworth.png"
+    },
+    {
+        "id": 9,
+        "name": "Tyrion Lannister",
+        "image": "./public/images/tyrion_lannister.png"
+    },
+    {
+        "id": 10,
+        "name": "Jon Snow",
+        "image": "./public/images/jon_snow.png"
+    },
+    {
+        "id": 11,
+        "name": "Jamie Lannister",
+        "image": "./public/images/jamie_lannister.png"
+    },
+    {
+        "id": 12,
+        "name": "Tormund Giantsbane",
+        "image": "./public/images/tormund_giantsbane.png"
+    },
+    {
+        "id": 13,
+        "name": "Bronn",
+        "image": "./public/images/bronn.png"
+    },
+    {
+        "id": 14,
+        "name": "Sansa Stark",
+        "image": "./public/images/sansa_stark.png"
+    },
+    {
+        "id": 15,
+        "name": "Samwell Tarley",
+        "image": "./public/images/samwell_tarley.png"
+    },
+    {
+        "id": 16,
+        "name": "Varys",
+        "image": "./public/images/varys.png"
+    },
+    {
+        "id": 17,
+        "name": "Cersei Lannister",
+        "image": "./public/images/cersei_lannister.png"
+    },
+    {
+        "id": 18,
+        "name": "Podrick Payne",
+        "image": "./public/images/podrick_payne.png"
+    }
+    
+]
