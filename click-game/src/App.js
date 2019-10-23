@@ -22,6 +22,7 @@ class App extends Component {
         {this.state.friends.map(friend => (
         <Card
         id={friend.id}
+        key={friend.id}
         name={friend.name}
         image={friend.image}
         />
