@@ -1,35 +1,115 @@
 import React, { Component} from 'react';
-import Card from "./components/card/index";
-import Wrapper from "./components/wrapper/index";
-import Title from "./components/title/index";
-import friends from "./friends.json";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import tiles from "./tiles.json";
 import './App.css';
 
 class App extends Component {
-  state = {
-    friends
+  constructor() {
+    super();
+    this.state = { 
+      isGuessCorrect: true, 
+      tiles: tiles, 
+      score: 0,
+      maxScore: 15,
+      topScore: 0,
+      message: "CLICK AN IMAGE TO BEGIN!"
+    };
+  }
+
+
+
+  
+
+  handleSaveClick = id => {
+    const tilez = this.state.tiles;
+    const tileClicked = tilez.filter(tile => tile.id === id);
+    if(!tileClicked[0].clicked) {
+      tileClicked[0].clicked = true;
+      this.handleCorrectClick();
+      // this.toggleAnimation(true);
+      this.randomizeCharacters(tilez);
+      this.setState({ tilez });
+    } else {
+      this.handleIncorrectClick();
+      // this.toggleAnimation(false);
+    }
   };
 
-  removeFriend = id => {
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    this.setState({ friends })
-  }
+  randomizeCharacters = characters => {
+    characters.sort((a, b) => {
+      return 0.5 - Math.random();
+    });
+  };
+
+  handleCorrectClick = () => {
+    this.setState({ isGuessCorrect: true });
+    if (this.state.score + 1 > this.state.topScore) {
+      this.setState({ topScore: this.state.topScore + 1 });
+    }
+    if (this.state.score + 1 >= this.state.maxScore) {
+      this.setState({
+        score: this.state.score + 1,
+        message: "CONGRATS! YOU WIN!",
+        messageClass: "correct"
+      });
+    } else {
+      this.setState({
+        score: this.state.score + 1,
+        message: "YOU GUESSED CORRECTLY!",
+        messageClass: "correct"
+      });
+    }
+  };
+
+  handleIncorrectClick = () => {
+    this.setState({
+      message: "INCORRECT. PLAY AGAIN?",
+      isGuessCorrect: false
+    });
+    // this.toggleIncorrectAnimation();
+    this.resetGame();
+  };
+
+  resetGame = id => {
+    const tilez = this.state.tiles;
+    for (let i = 0; i < tilez.length; i++) {
+      tilez[i].clicked = false;
+    }
+    this.setState({ score: 0 });
+  };
 
   render() {
+    const { message, score, tiles, topScore } = this.state;
     return (
-      <Wrapper>
-        <Title>Clicky Game</Title>
-        {this.state.friends.map(friend => (
-        <Card
-        id={friend.id}
-        key={friend.id}
-        name={friend.name}
-        image={friend.image}
+      <div className="scoreboard">
+        <Navbar
+          className="row"
+          score={score}
+          topScore={topScore}
+          message={message}
         />
-        ))}
-      </Wrapper>
+        <Header className="bg-header row" />
+        <div className="tiles">
+          {tiles.map(({ id, name, image, clicked }) => (
+            <Card
+              key={id}
+              id={id}
+              name={name}
+              image={image}
+              clicked={clicked}
+              clickHandler={this.handleSaveClick}
+            />
+          ))}
+        </div>
+
+        <Footer className="footer-mgn row" />
+      </div>
     );
   }
-}
+};
+
 
 export default App;

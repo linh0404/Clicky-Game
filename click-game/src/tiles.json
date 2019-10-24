@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name": "Sandor Clegane",
+        "image": "/images/sandor_clegane.png",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "Danaerys Targaryen",
+        "image": "/images/danaerys_targaryen.png",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Bran Stark",
+        "image": "/images/bran_stark.png",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Jorah Mormont",
+        "image": "/images/jorah_mormont.png",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Arya Stark",
+        "image": "/images/arya_stark.png",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Theon Greyjoy",
+        "image": "/images/theon_greyjoy.png",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Brienne of Tarth",
+        "image": "/images/brienne-of-tarth.png",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Davos Seaworth",
+        "image": "/images/davos_seaworth.png",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Tyrion Lannister",
+        "image": "/images/tyrion_lannister.png",
+        "clicked": false
+    },
+    {
+        "id": 10, 
+        "name": "Jon Snow",
+        "image": "/images/jon_snow.png",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Jamie Lannister",
+        "image": "/images/jamie_lannister.png",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Tormund Giantsbane",
+        "image": "/images/tormund_giantsbane.png",
+        "clicked": false
+    },
+    {
+        "id": 13,
+        "name": "Sansa Stark",
+        "image": "/images/sansa_stark.png",
+        "clicked": false
+    },
+    {
+        "id": 14,
+        "name": "Samwell Tarley",
+        "image": "/images/samwell_tarley.png",
+        "clicked": false
+    },
+    {
+        "id": 15,
+        "name": "Cersei Lannister",
+        "image": "/images/cersei_lannister.png",
+        "clicked": false
+    }
+    
+]
