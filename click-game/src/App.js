@@ -18,9 +18,6 @@ class App extends Component {
       message: "CLICK AN IMAGE TO BEGIN!"
     };
   }
-
-
-
   
 
   handleSaveClick = id => {
@@ -84,7 +81,7 @@ class App extends Component {
   render() {
     const { message, score, tiles, topScore } = this.state;
     return (
-      <div className="scoreboard">
+      <div className="lodge">
         <Navbar
           className="row"
           score={score}

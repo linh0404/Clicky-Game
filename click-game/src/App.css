@@ -1,0 +1,63 @@
+.App {
+    text-align: center;
+    font-family: 'Jomolhari', serif;
+}
+
+body {
+    background: url(http://7wallpapers.net/wp-content/uploads/9_Game-Of-Thrones.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Jomolhari', serif;
+}
+
+nav {
+    color: black;
+}
+
+.jumbotron {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+}
+
+.jumbotron h1 { 
+    font-size: 40px;
+}
+
+.card-select:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.grow {
+  transition: all 0.1s ease-in-out;
+}
+
+.card-holder img {
+  height: 200px;
+  width: 200px;
+}
+
+.bg-nav {
+  background: rgba(0,0,0,1.0);
+  color: white;
+}
+
+a { 
+    color: white;
+    margin: 10px;
+}
+
+.navbar {
+  background: rgba(0,0,0,1.0);
+  color: #eee;
+  padding: 10px 50px;
+  position: sticky;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  letter-spacing: 12px;
+  font-weight: 700;
+}
